@@ -31,9 +31,9 @@ class App extends React.Component {
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>{this.state.c.map(a=>(<td><img src={a.pictureUrl} width="60" height="90"></img></td>))}</td>
-<td>{this.state.c.map(a=>( <td>{a.name}</td>))}</td>
-<td>{this.state.c.map(a=>( <td>{a.popularity}</td>))}</td>
+<td>{this.state.c.slice(0,5).map(a=>(<td><img src={a.pictureUrl} width="60" height="90"></img></td>))}</td>
+<td>{this.state.c.slice(0,5).map(a=>( <td>{a.name}</td>))}</td>
+<td>{this.state.c.slice(0,5).map(a=>( <td>{a.popularity}</td>))}</td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
