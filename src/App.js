@@ -10,16 +10,22 @@ class App extends React.Component {
   }
   render() {
   
-    const t1= "10";
-    function sayHello() {
-      
+
+    function addRandom() {
+        let contactsLength = contacts.length;
+        let randomContacts = Math.floor(Math.random() * contactsLength);
+        alert(randomContacts);
+   
+    
+
+        
     }
 
   return(
     <div classname= "App">
           <h3 style={{ display: 'flex', justifyContent: 'center' }}>IronContacts List</h3>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-      <h3><button onClick={sayHello}>Add Random </button></h3>
+      <h3><button onClick={addRandom}>Add Random </button></h3>
       <h3> <button onClick={() => this.sortByName()}> Sort By Name</button></h3>
       <h3> <button onClick={() => this.sortByPopularity()}> Sort By Popularity</button></h3>
         </div>
@@ -40,7 +46,6 @@ class App extends React.Component {
                     <td><img src={contact.pictureUrl} height='90px'alt={contact.name}/> </td>
                     <td >{contact.name}</td>
                     <td>{contact.popularity}</td>
-                   
                   </tr>
                 );            
               })}
